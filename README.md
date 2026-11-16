@@ -6,7 +6,7 @@ Welcome! This is a curated collection of data science projects I've completed ac
 💼 I have two years of experience working with data at **La Nación**, covering both **audience analytics and business metrics**, as well as **data journalism**.  
 Some of that work can be explored [here](https://shorturl.at/Fa6py).
 
-This portfolio focuses on how data can drive **insights, growth, and strategy** — all central to the role of **Growth Analytics Lead**.
+This portfolio focuses on how data can drive **insights, growth, and strategy**.
 
 ---
 
