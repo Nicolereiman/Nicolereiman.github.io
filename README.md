@@ -2,7 +2,7 @@
 
 Welcome! This is a curated collection of data science projects I've completed across academic, professional, and personal contexts.
 
-🎓 I recently graduated with honors in **Data Science from ITBA (Instituto Tecnológico de Buenos Aires)**.  
+🎓 I graduated with honors in **Data Science from ITBA (Instituto Tecnológico de Buenos Aires)**.  
 💼 I have two years of experience working with data at **La Nación**, covering both **audience analytics and business metrics**, as well as **data journalism**.  
 Some of that work can be explored [here](https://shorturl.at/Fa6py).
 
