@@ -1,110 +1,441 @@
-# 📈 Nicole Reiman – Data Science Portfolio
 
-Welcome! This is a curated collection of data science projects I've completed across academic, professional, and personal contexts.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nicole Reiman's Data Science Portfolio, showcasing projects in analytics, machine learning, forecasting, and data visualization.">
+  <title>Nicole Reiman | Data Science Portfolio</title>
 
-🎓 I graduated with honors in **Data Science from ITBA (Instituto Tecnológico de Buenos Aires)**.  
-💼 I have two years of experience working with data at **La Nación**, covering both **audience analytics and business metrics**, as well as **data journalism**.  
-Some of that work can be explored [here](https://shorturl.at/Fa6py).
+  <style>
+    :root {
+      --background: #f7f8fa;
+      --surface: #ffffff;
+      --text: #202938;
+      --muted: #687386;
+      --accent: #3268a8;
+      --accent-light: #eaf1fa;
+      --border: #e3e7ed;
+    }
 
-This portfolio focuses on how data can drive **insights, growth, and strategy** — all central to the role of **Growth Analytics Lead**.
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
----
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 48px 20px;
+    }
 
-## 🌍 Most Relevant Projects
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-### 🎧 [Spotify Popularity Prediction](https://github.com/Nicolereiman/spotify-popularity)
-**Tools:** Python, Scikit-learn, XGBoost, SHAP, Hyperopt  
-Used machine learning to predict a song’s popularity on Spotify using audio features. Includes pipeline modeling, hyperparameter optimization, and model interpretability.
+    header {
+      margin-bottom: 42px;
+    }
 
-> 📊 Business framing: how can we identify and promote future hits using historical listening and audio data?
+    h1 {
+      font-size: 2.2rem;
+      line-height: 1.25;
+      margin-bottom: 18px;
+      letter-spacing: -0.7px;
+    }
 
+    h2 {
+      font-size: 1.45rem;
+      margin: 42px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
 
----
+    h3 {
+      font-size: 1.12rem;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
 
-### 🌡️ [Global Climate Trends with PySpark](https://github.com/Nicolereiman/climate)
-**Tools:** PySpark, Databricks (Community), Prophet, Random Forest  
-Analyzed 1.6M+ records of temperature data to identify trends and train predictive models for India’s climate. All executed in a limited-resource cloud environment.
+    p {
+      margin-bottom: 14px;
+    }
 
-> 🧠 Focus on data pipeline design, model evaluation, and cost-aware experimentation.
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-### ⏳ [Time Series Forecasting with Streamlit](https://github.com/Nicolereiman/climate-deploy)
-**Tools:** Python, Pandas, GIS, Streamlit
-Adapted version of the previous climate project, with a new focus on time series modeling and user-facing deployment.
+    a:hover {
+      text-decoration: underline;
+    }
 
-Developed a forecasting model from the same dataset and deployed it as an interactive web app, allowing users to explore future climate trends by country and prediction horizon.
+    .intro {
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
 
-🔗 [View the live app](https://predictivo-avanzado-grupo8-2c-023.streamlit.app/)
+    .project {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-bottom: 16px;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
 
----
+    .project:hover {
+      box-shadow: 0 5px 18px rgba(20, 40, 70, 0.06);
+      transform: translateY(-2px);
+    }
 
-### 🌽 [Corn Stand Counting with YOLOv5 (Bachelor Thesis)](https://github.com/Nicolereiman/stand-count)
-**Tools:** YOLOv5, Drone Imagery, Python  
-Developed a plant detection system for agriculture using object detection and bounding box annotation. Quantified performance vs. manual labor cost.
+    .tools {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
 
----
+    .business-framing {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      padding: 11px 15px;
+      border-radius: 4px;
+      margin-top: 14px;
+      font-size: 0.94rem;
+    }
 
-### 🌱 [Emotional Data Diary – Tracker 2023](https://github.com/Nicolereiman/A-Year-in-Tears-2023?tab=readme-ov-file)
-**Tools:** Excel, Canva, Self-quantified log  
-A personal data project tracking and analyzing emotional patterns across 12 months. Explores crying frequency, causes, locations, cycle phases, and emotional context.
+    .skills {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
 
-> 📌 Why it matters: Even personal data can lead to actionable patterns and behavioral insight — with the right framing.
+    .skills p {
+      margin-bottom: 10px;
+    }
 
----
+    .skills p:last-child {
+      margin-bottom: 0;
+    }
 
+    .links {
+      padding-left: 22px;
+      margin: 12px 0;
+    }
 
-## 🏛 Other Academic Projects
+    .links li {
+      margin-bottom: 8px;
+    }
 
-### 🎬 [Movie Catalog Analysis (Descriptive Analytics)](https://github.com/Nicolereiman/Movies)
-**Tools:** R, MCA, Chi-Square, T-Test  
-Exploratory analysis of 8,000+ titles on Netflix: country representation, genre trends, movie/series distribution over time.
+    footer {
+      margin-top: 45px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
 
-> 🔍 Summary in English available in the repo – full report in Spanish.
+    footer p {
+      margin-bottom: 6px;
+    }
 
----
+    @media (max-width: 600px) {
+      body {
+        padding: 28px 16px;
+      }
 
-### 🏦 [Bank Queue Simulation (AnyLogic)](https://github.com/Nicolereiman/Bank-Simulation)
-**Tools:** AnyLogic (Personal Edition), Agent-Based Modeling  
-Simulated client flow and employee scheduling in a bank branch. Explored service level maximization under budget and infrastructure constraints.
+      h1 {
+        font-size: 1.8rem;
+      }
 
----
+      .project {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
 
-### 🌆 Discover Buenos Aires – Web Development Project
-**Tools:** HTML5, CSS3, JavaScript
-A front-end web project created during a university web programming course. The site showcases cultural walking tours in different neighborhoods of Buenos Aires (San Telmo, Recoleta, Palermo), allowing users to read descriptions, book tours, and leave reviews.
+<body>
+<main class="container">
 
-> 🧭 Fully responsive and focused on accessibility, the design was built to make the city's historical and cultural richness more reachable to locals and visitors alike.
+  <header>
+    <h1>📈 Nicole Reiman – Data Science Portfolio</h1>
 
-> 📌 Why it matters: While not a data science project, this work reflects my interest in digital storytelling and my foundation in web technologies.
+    <p class="intro">
+      Welcome! This is a curated collection of data science projects
+      I've completed across academic, professional, and personal contexts.
+    </p>
 
----
-### 🎸 Band Explorer – PyQt Application  
-**Tools:** Python, PyQt5, Matplotlib
-Built a GUI tool to analyze local bands in Argentina based on genre, social presence, and location. Offers 14 interactive queries and visualizations on a real-world dataset.
-Emphasized modular design, GUI navigation, and data exploration.
+    <p>
+      🎓 I graduated with honors in <strong>Data Science from ITBA
+      (Instituto Tecnológico de Buenos Aires)</strong>.
+    </p>
 
----
+    <p>
+      💼 I have two years of experience working with data at
+      <strong>La Nación</strong>, covering both
+      <strong>audience analytics and business metrics</strong>,
+      as well as <strong>data journalism</strong>.
+      Some of that work can be explored
+      <a href="https://shorturl.at/Fa6py" target="_blank">here</a>.
+    </p>
 
-## 🛠 Skills Overview
+    <p>
+      This portfolio focuses on how data can drive
+      <strong>insights, growth, and strategy</strong> —
+      all central to the role of <strong>Growth Analytics Lead</strong>.
+    </p>
+  </header>
 
-- **Languages & Tools**: Python, SQL, R, Spark, Tableau, Scikit-learn, SHAP, Prophet, Figma, Canva  
-- **Experience**: Growth metrics, content performance, visual communication, storytelling with data  
-- **Industries**: Media, Journalism, Agriculture, Streaming, Education  
-- **Approach**: Experimental mindset + real-world framing
+  <section>
+    <h2>🌍 Most Relevant Projects</h2>
 
----
+    <article class="project">
+      <h3>
+        🎧 <a href="https://github.com/Nicolereiman/spotify-popularity"
+        target="_blank">Spotify Popularity Prediction</a>
+      </h3>
+      <p class="tools">
+        <strong>Tools:</strong> Python, Scikit-learn, XGBoost, SHAP, Hyperopt
+      </p>
+      <p>
+        Used machine learning to predict a song's popularity on Spotify
+        using audio features. Includes pipeline modeling, hyperparameter
+        optimization, and model interpretability.
+      </p>
+      <div class="business-framing">
+        📊 <strong>Business framing:</strong> How can we identify and
+        promote future hits using historical listening and audio data?
+      </div>
+    </article>
 
-## 🗂️ About This Portfolio
+    <article class="project">
+      <h3>
+        🌡️ <a href="https://github.com/Nicolereiman/climate"
+        target="_blank">Global Climate Trends with PySpark</a>
+      </h3>
+      <p class="tools">
+        <strong>Tools:</strong> PySpark, Databricks (Community),
+        Prophet, Random Forest
+      </p>
+      <p>
+        Analyzed 1.6M+ records of temperature data to identify trends
+        and train predictive models for India's climate. All executed
+        in a limited-resource cloud environment.
+      </p>
+      <div class="business-framing">
+        🧠 Focus on data pipeline design, model evaluation,
+        and cost-aware experimentation.
+      </div>
+    </article>
 
-All the projects showcased in this GitHub profile are academic or personal.  
-My **professional work** — is publicly available at:
+    <article class="project">
+      <h3>
+        ⏳ <a href="https://github.com/Nicolereiman/climate-deploy"
+        target="_blank">Time Series Forecasting with Streamlit</a>
+      </h3>
+      <p class="tools">
+        <strong>Tools:</strong> Python, Pandas, GIS, Streamlit
+      </p>
+      <p>
+        Adapted version of the previous climate project, with a new
+        focus on time series modeling and user-facing deployment.
+      </p>
+      <p>
+        Developed a forecasting model from the same dataset and
+        deployed it as an interactive web app, allowing users to
+        explore future climate trends by country and prediction horizon.
+      </p>
+      <p>
+        🔗 <a href="https://predictivo-avanzado-grupo8-2c-023.streamlit.app/"
+        target="_blank">View the live app</a>
+      </p>
+    </article>
 
-- [LinkedIn – Nicole Reiman](https://www.linkedin.com/in/nicole-reiman-32877b245/overlay/urn:li:fsd_profilePosition:(ACoAADzN5xABL64ZQL64LL8_O5OGsJghdLZMnow,2482741087)/treasury/)
-- [Author page – La Nación](https://www.lanacion.com.ar/autor/NicoleReiman/)
+    <article class="project">
+      <h3>
+        🌽 <a href="https://github.com/Nicolereiman/stand-count"
+        target="_blank">Corn Stand Counting with YOLOv5 (Bachelor Thesis)</a>
+      </h3>
+      <p class="tools">
+        <strong>Tools:</strong> YOLOv5, Drone Imagery, Python
+      </p>
+      <p>
+        Developed a plant detection system for agriculture using
+        object detection and bounding box annotation. Quantified
+        performance vs. manual labor cost.
+      </p>
+    </article>
 
-These include real-world applications of data science in journalism.
+    <article class="project">
+      <h3>
+        🌱 <a href="https://github.com/Nicolereiman/A-Year-in-Tears-2023?tab=readme-ov-file"
+        target="_blank">Emotional Data Diary – Tracker 2023</a>
+      </h3>
+      <p class="tools">
+        <strong>Tools:</strong> Excel, Canva, Self-quantified log
+      </p>
+      <p>
+        A personal data project tracking and analyzing emotional
+        patterns across 12 months. Explores crying frequency,
+        causes, locations, cycle phases, and emotional context.
+      </p>
+      <div class="business-framing">
+        📌 <strong>Why it matters:</strong> Even personal data can
+        lead to actionable patterns and behavioral insight —
+        with the right framing.
+      </div>
+    </article>
+  </section>
 
----
+  <section>
+    <h2>🏛 Other Academic Projects</h2>
 
-📍 Based in Buenos Aires  
-🌍 Open to relocate |  Holder of European Union citizenship
-📬 [LinkedIn](https://www.linkedin.com/in/nicole-reiman-32877b245/) · [GitHub](https://github.com/Nicolereiman)
+    <article class="project">
+      <h3>
+        🎬 <a href="https://github.com/Nicolereiman/Movies"
+        target="_blank">Movie Catalog Analysis (Descriptive Analytics)</a>
+      </h3>
+      <p class="tools">
+        <strong>Tools:</strong> R, MCA, Chi-Square, T-Test
+      </p>
+      <p>
+        Exploratory analysis of 8,000+ titles on Netflix:
+        country representation, genre trends, movie/series
+        distribution over time.
+      </p>
+      <div class="business-framing">
+        🔍 Summary in English available in the repo – full report in Spanish.
+      </div>
+    </article>
+
+    <article class="project">
+      <h3>
+        🏦 <a href="https://github.com/Nicolereiman/Bank-Simulation"
+        target="_blank">Bank Queue Simulation (AnyLogic)</a>
+      </h3>
+      <p class="tools">
+        <strong>Tools:</strong> AnyLogic (Personal Edition),
+        Agent-Based Modeling
+      </p>
+      <p>
+        Simulated client flow and employee scheduling in a bank branch.
+        Explored service level maximization under budget and
+        infrastructure constraints.
+      </p>
+    </article>
+
+    <article class="project">
+      <h3>🌆 Discover Buenos Aires – Web Development Project</h3>
+      <p class="tools">
+        <strong>Tools:</strong> HTML5, CSS3, JavaScript
+      </p>
+      <p>
+        A front-end web project created during a university web
+        programming course. The site showcases cultural walking
+        tours in different neighborhoods of Buenos Aires
+        (San Telmo, Recoleta, Palermo), allowing users to read
+        descriptions, book tours, and leave reviews.
+      </p>
+      <div class="business-framing">
+        🧭 Fully responsive and focused on accessibility, the design
+        was built to make the city's historical and cultural richness
+        more reachable to locals and visitors alike.
+        <br><br>
+        📌 <strong>Why it matters:</strong> While not a data science
+        project, this work reflects my interest in digital storytelling
+        and my foundation in web technologies.
+      </div>
+    </article>
+
+    <article class="project">
+      <h3>🎸 Band Explorer – PyQt Application</h3>
+      <p class="tools">
+        <strong>Tools:</strong> Python, PyQt5, Matplotlib
+      </p>
+      <p>
+        Built a GUI tool to analyze local bands in Argentina based
+        on genre, social presence, and location. Offers 14 interactive
+        queries and visualizations on a real-world dataset.
+      </p>
+      <p>
+        Emphasized modular design, GUI navigation, and data exploration.
+      </p>
+    </article>
+  </section>
+
+  <section>
+    <h2>🛠 Skills Overview</h2>
+
+    <div class="skills">
+      <p>
+        <strong>Languages & Tools:</strong>
+        Python, SQL, R, Spark, Tableau, Scikit-learn, SHAP,
+        Prophet, Figma, Canva
+      </p>
+
+      <p>
+        <strong>Experience:</strong>
+        Growth metrics, content performance, visual communication,
+        storytelling with data
+      </p>
+
+      <p>
+        <strong>Industries:</strong>
+        Media, Journalism, Agriculture, Streaming, Education
+      </p>
+
+      <p>
+        <strong>Approach:</strong>
+        Experimental mindset + real-world framing
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>🗂️ About This Portfolio</h2>
+
+    <p>
+      All the projects showcased in this GitHub profile are academic
+      or personal. My <strong>professional work</strong> is publicly
+      available at:
+    </p>
+
+    <ul class="links">
+      <li>
+        <a href="https://www.linkedin.com/in/nicole-reiman-32877b245/overlay/urn:li:fsd_profilePosition:(ACoAADzN5xABL64ZQL64LL8_O5OGsJghdLZMnow,2482741087)/treasury/"
+        target="_blank">LinkedIn – Nicole Reiman</a>
+      </li>
+      <li>
+        <a href="https://www.lanacion.com.ar/autor/NicoleReiman/"
+        target="_blank">Author page – La Nación</a>
+      </li>
+    </ul>
+
+    <p>
+      These include real-world applications of data science in journalism.
+    </p>
+  </section>
+
+  <footer>
+    <p>📍 Based in Buenos Aires</p>
+    <p>🌍 Open to relocate | Holder of European Union citizenship</p>
+    <p>
+      📬 <a href="https://www.linkedin.com/in/nicole-reiman-32877b245/"
+      target="_blank">LinkedIn</a>
+      ·
+      <a href="https://github.com/Nicolereiman"
+      target="_blank">GitHub</a>
+    </p>
+  </footer>
+
+</main>
+</body>
+</html>
